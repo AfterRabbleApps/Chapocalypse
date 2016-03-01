@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
 
-/// <summary>
-/// Place in side Empty Ball Thing
-/// </summary>
+
 public class MenuScript : MonoBehaviour
 {
 	void OnGUI()
@@ -22,8 +20,6 @@ public class MenuScript : MonoBehaviour
 		// Draw a button to start the game
 		if(GUI.Button(buttonRect,"Start!"))
 		{
-			// On Click, load the first level.
-			// "Stage1" is the name of the first scene we created.
 			Application.LoadLevel("Stage1");
 		}
 	}

@@ -12,11 +12,9 @@ public class TennisBall : MonoBehaviour
 		spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 	}
 
-	// Update is called once per frame
 	void Update () 
 	{
 		transform.position += Time.deltaTime * speed * transform.forward;
-
 		if(spriteRenderer.isVisible == false)
 		{
 			Destroy(gameObject);
@@ -27,6 +25,7 @@ public class TennisBall : MonoBehaviour
 	{
 		if(aCollider.gameObject.layer == LayerMask.NameToLayer("Enemy"))
 		{
+			scoreManager.currentScore += dogAttack.dogValue;
 			Destroy(aCollider.gameObject);
 			Destroy(gameObject);
 

@@ -49,10 +49,11 @@
      <Compile Include="Assets\Scripts\Dogs\dogSpawner.cs" />
      <Compile Include="Assets\Scripts\Managers\healthManager.cs" />
      <Compile Include="Assets\Scripts\Managers\scoreManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\spawnManger.cs" />
      <Compile Include="Assets\Scripts\MenuScript.cs" />
-     <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\Player\Player.cs" />
+     <Compile Include="Assets\Scripts\Player\playerTouch.cs" />
      <Compile Include="Assets\Scripts\TennisBall.cs" />
-     <Compile Include="Assets\Scripts\playerTouch.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

@@ -1,17 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class healthManagers : MonoBehaviour {
+public class healthManager : MonoBehaviour {
 
-	public GUIText ScoreText;
+	public static int currentHealth = 6;
+	public int testHealth = 0;
 
 	// Use this for initialization
-	void Start () {
-	
+	void Start () 
+	{
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
+	void Update () 
+	{
+		testHealth = currentHealth;
+		if (currentHealth <= 0)
+		{
+			Destroy (GameObject.FindGameObjectWithTag("Player"));
+		}
 	}
 }

@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class scoreManager : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	public static int currentScore = 0;
+	public int testScore = 0;
+
+	void Update()
+	{
+		testScore = currentScore;
+		//yGuiText = currentScore();
 	}
 }
