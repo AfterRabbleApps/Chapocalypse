@@ -1,8 +1,0 @@
-@font-face {
-    font-family: 'ArialBlackRegular';
-    src: url('arial-black.eot');
-    src: url('arial-black.eot') format('embedded-opentype'),
-         url('arial-black.woff') format('woff'),
-         url('arial-black.ttf') format('truetype'),
-         url('arial-black.svg#ArialBlackRegular') format('svg');
-}
