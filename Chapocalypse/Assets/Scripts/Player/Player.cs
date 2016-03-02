@@ -4,25 +4,27 @@ using System.Collections;
 public class Player : MonoBehaviour
 {
 	public GameObject bulletPrefab;
+	Animator anim;
 
-	// Use this for initialization
-	void Start ()
+	void Awake ()
 	{
-	
+		anim = GetComponent<Animator> ();
 	}
-	
-	// Update is called once per frame
+
 	void Update ()
 	{
-		Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-		mouseWorldPos.z = 0f;
-		transform.LookAt(mouseWorldPos);
 
-		if(Input.GetButtonDown("Fire1"))
+		if (GameManager.isPaused == 1) 
 		{
-			GameObject bullet = GameObject.Instantiate(bulletPrefab);
-			bullet.transform.position = transform.position;
-			bullet.transform.forward = transform.forward;
+			Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+			mouseWorldPos.z = 0f;
+			transform.LookAt (mouseWorldPos);
+
+			if (Input.GetButtonDown ("Fire1")) {
+				GameObject bullet = GameObject.Instantiate (bulletPrefab);
+				bullet.transform.position = transform.position;
+				bullet.transform.forward = transform.forward;
+			}
 		}
 	}
 
@@ -36,6 +38,7 @@ public class Player : MonoBehaviour
 
 		if(aCollider.gameObject.tag == "Enemy")
 		{
+			anim.SetTrigger ("PlayerTouch");
 			healthManager.currentHealth = healthManager.currentHealth - dogAttack.dogValue;
 		}
 	}

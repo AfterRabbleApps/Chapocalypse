@@ -47,7 +47,10 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Dogs\dogAttack.cs" />
      <Compile Include="Assets\Scripts\Dogs\dogSpawner.cs" />
+     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\GameOverManager.cs" />
      <Compile Include="Assets\Scripts\Managers\healthManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\pauseScoreManager.cs" />
      <Compile Include="Assets\Scripts\Managers\scoreManager.cs" />
      <Compile Include="Assets\Scripts\Managers\spawnManger.cs" />
      <Compile Include="Assets\Scripts\MenuScript.cs" />

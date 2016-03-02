@@ -8,6 +8,7 @@ public class dogAttack : MonoBehaviour
 	private Transform player;
 	public static int killCount = 0;
 	public static int dogValue = 1;
+	public int[] dogSpeed;
 
 
 	void Start()
@@ -20,10 +21,13 @@ public class dogAttack : MonoBehaviour
 
 	void Update ()
 	{
+
+		int speedIndex = Random.Range (0, dogSpeed.Length);
+
 		if(player != null)
 		{
 			transform.LookAt(player);
-			transform.position += transform.forward * Time.deltaTime * speed;
+			transform.position += transform.forward * Time.deltaTime * dogSpeed[speedIndex];
 		}
 	}
 
