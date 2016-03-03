@@ -19,3 +19,25 @@ A:\Chapocalypse\Chapocalypse\Temp\bin\Debug\UnityEngine.Networking.xml
 A:\Chapocalypse\Chapocalypse\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 A:\Chapocalypse\Chapocalypse\obj\Debug\Assembly-CSharp.dll
 A:\Chapocalypse\Chapocalypse\obj\Debug\Assembly-CSharp.pdb
+A:\Chapocalypse\Chapocalypse old builds\0.6\Chapocalypse\Temp\bin\Debug\Assembly-CSharp.dll
+A:\Chapocalypse\Chapocalypse old builds\0.6\Chapocalypse\Temp\bin\Debug\Assembly-CSharp.pdb
+A:\Chapocalypse\Chapocalypse old builds\0.6\Chapocalypse\Temp\bin\Debug\UnityEditor.dll
+A:\Chapocalypse\Chapocalypse old builds\0.6\Chapocalypse\Temp\bin\Debug\UnityEngine.dll
+A:\Chapocalypse\Chapocalypse old builds\0.6\Chapocalypse\Temp\bin\Debug\UnityEngine.Networking.dll
+A:\Chapocalypse\Chapocalypse old builds\0.6\Chapocalypse\Temp\bin\Debug\UnityEngine.UI.dll
+A:\Chapocalypse\Chapocalypse old builds\0.6\Chapocalypse\Temp\bin\Debug\Mono.Cecil.dll
+A:\Chapocalypse\Chapocalypse old builds\0.6\Chapocalypse\Temp\bin\Debug\Unity.SerializationLogic.dll
+A:\Chapocalypse\Chapocalypse old builds\0.6\Chapocalypse\Temp\bin\Debug\Unity.DataContract.dll
+A:\Chapocalypse\Chapocalypse old builds\0.6\Chapocalypse\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+A:\Chapocalypse\Chapocalypse old builds\0.6\Chapocalypse\Temp\bin\Debug\Unity.UNetWeaver.dll
+A:\Chapocalypse\Chapocalypse old builds\0.6\Chapocalypse\Temp\bin\Debug\Unity.CecilTools.dll
+A:\Chapocalypse\Chapocalypse old builds\0.6\Chapocalypse\Temp\bin\Debug\Mono.Cecil.Pdb.dll
+A:\Chapocalypse\Chapocalypse old builds\0.6\Chapocalypse\Temp\bin\Debug\Mono.Cecil.Mdb.dll
+A:\Chapocalypse\Chapocalypse old builds\0.6\Chapocalypse\Temp\bin\Debug\UnityEngine.xml
+A:\Chapocalypse\Chapocalypse old builds\0.6\Chapocalypse\Temp\bin\Debug\UnityEditor.xml
+A:\Chapocalypse\Chapocalypse old builds\0.6\Chapocalypse\Temp\bin\Debug\UnityEngine.UI.xml
+A:\Chapocalypse\Chapocalypse old builds\0.6\Chapocalypse\Temp\bin\Debug\UnityEngine.Networking.xml
+A:\Chapocalypse\Chapocalypse old builds\0.6\Chapocalypse\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+A:\Chapocalypse\Chapocalypse old builds\0.6\Chapocalypse\obj\Debug\Assembly-CSharp.dll
+A:\Chapocalypse\Chapocalypse old builds\0.6\Chapocalypse\obj\Debug\Assembly-CSharp.pdb
+A:\Chapocalypse\Chapocalypse old builds\0.6\Chapocalypse\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb

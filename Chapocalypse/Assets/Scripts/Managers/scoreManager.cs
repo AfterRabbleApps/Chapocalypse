@@ -5,7 +5,7 @@ using System.Collections;
 public class scoreManager : MonoBehaviour {
 
 	public static int currentScore;
-	public int testScore = 0;
+	public static float testScore;
 
 	Text text;
 

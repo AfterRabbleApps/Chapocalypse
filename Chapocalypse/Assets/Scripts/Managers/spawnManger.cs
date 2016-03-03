@@ -4,14 +4,29 @@ using System.Collections;
 public class spawnManger : MonoBehaviour {
 
 	public GameObject[] enmey;
-	public float spawnTime = 100f;
+	public float spawnTime = 1.0F;
 	public Transform[] spawnPoints;
 	//public GameObject Dogs;
-
+ 	
 
 
 	void Start () {
-		InvokeRepeating ("Spawn", spawnTime, spawnTime);
+		InvokeRepeating ("Spawn", 1, 1.0F);
+		Debug.Log (spawnTime);
+	}
+
+	void update()
+	{
+		if (((scoreManager.currentScore % 10) == 0 ) && (scoreManager.currentScore > 9) ) 
+		{
+			CancelInvoke ("Spawn");
+
+			spawnTime -= .1F;
+			Debug.Log (spawnTime);
+
+			//InvokeRepeating ("Spawn", 1, spawnTime);
+		}
+
 	}
 
 	void Spawn() {

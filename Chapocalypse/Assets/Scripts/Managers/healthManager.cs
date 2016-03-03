@@ -40,7 +40,7 @@ public class healthManager : MonoBehaviour {
 		if (currentHealth <= 0)
 		{
 			text.text = "XXX";
-			Destroy (GameObject.FindGameObjectWithTag("Player"));
+			//Destroy (GameObject.FindGameObjectWithTag("Player"));
 		}
 	}
 }

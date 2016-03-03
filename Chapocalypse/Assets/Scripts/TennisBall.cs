@@ -6,6 +6,7 @@ public class TennisBall : MonoBehaviour
 	public float speed = 2f;
 	private SpriteRenderer spriteRenderer;
 	public int Points;
+	public Rigidbody2D[] rb;
 
 	void Start()
 	{
@@ -27,7 +28,7 @@ public class TennisBall : MonoBehaviour
 		{
 			scoreManager.currentScore += dogAttack.dogValue;
 			Destroy(aCollider.gameObject);
-			Destroy(gameObject);
+			//Destroy(gameObject);
 
 		}
 	}

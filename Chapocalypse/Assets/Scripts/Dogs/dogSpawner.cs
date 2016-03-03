@@ -8,6 +8,7 @@ public class dogSpawner : MonoBehaviour
 	public float m_MaximumSpawnDelay = 4f;
 	public GameObject[] enemies;
 
+
 	void Start ()
 	{
 		StartCoroutine("DoSpawn");

@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SocialPlatforms;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
@@ -15,6 +17,7 @@ public class GameManager : MonoBehaviour {
 	public GameObject MuteOn1;
 	public GameObject MuteOn2;
 	public static int isPaused;
+	public static int GameScore;
 
 
 	void Start () 
@@ -49,8 +52,8 @@ public class GameManager : MonoBehaviour {
 			GameCanvas.SetActive (false);
 			Time.timeScale = 0;
 			Destroy (GameObject.FindGameObjectWithTag("Enemy"));
-
 		}
+		GameScore = scoreManager.currentScore;
 	}
 
 	public void PlayButton()
@@ -90,15 +93,6 @@ public class GameManager : MonoBehaviour {
 		MuteOn.SetActive (false);
 		MuteOff1.SetActive (true);
 		MuteOn1.SetActive (false);
-	}
-
-	public void ScoreZero()
-	{
-		if(scoreManager.currentScore <=0)
-		{
-
-		}
-			
 	}
 
 }
