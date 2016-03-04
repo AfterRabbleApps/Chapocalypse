@@ -5,6 +5,7 @@ public class Player : MonoBehaviour
 {
 	public GameObject bulletPrefab;
 	Animator anim;
+	GameObject HealthManager;
 
 	void Awake ()
 	{
@@ -30,16 +31,16 @@ public class Player : MonoBehaviour
 
 	void OnTriggerEnter2D (Collider2D aCollider)
 	{
-		if (aCollider.gameObject.layer == LayerMask.NameToLayer ("Enemy")) 
-		{
+		if (aCollider.gameObject.layer == LayerMask.NameToLayer ("Enemy")) {
 			Destroy (aCollider.gameObject);
 			//Destroy(gameObject);
 		}
 
-		if(aCollider.gameObject.tag == "Enemy")
-		{
+		if (aCollider.gameObject.tag == "Enemy") {
 			anim.SetTrigger ("PlayerTouch");
 			healthManager.currentHealth = healthManager.currentHealth - dogAttack.dogValue;
+
 		}
+
 	}
 }

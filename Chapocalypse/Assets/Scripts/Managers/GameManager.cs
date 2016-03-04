@@ -10,14 +10,20 @@ public class GameManager : MonoBehaviour {
 	public GameObject MainMenuCanvas;
 	public GameObject PauseCanvas;
 	public GameObject GameOverCanvas;
-	public GameObject MuteOff;
 	public GameObject MuteOff1;
 	public GameObject MuteOff2;
-	public GameObject MuteOn;
+	public GameObject MuteOff3;
 	public GameObject MuteOn1;
 	public GameObject MuteOn2;
+	public GameObject MuteOn3;
+	public static int GameHealth;
+	public static int Highscore;
+	public static int HealthScore;
 	public static int isPaused;
 	public static int GameScore;
+	public bool isMute;
+	public int i = 1;
+
 
 
 	void Start () 
@@ -26,16 +32,17 @@ public class GameManager : MonoBehaviour {
 		GameCanvas.SetActive (false);
 		PauseCanvas.SetActive (false);
 		GameOverCanvas.SetActive (false);
-		Time.timeScale = 0;
-		MuteOn.SetActive (false);
 		MuteOn1.SetActive (false);
 		MuteOn2.SetActive (false);
+		MuteOn2.SetActive (false);
 		isPaused = 0;
+		Time.timeScale = 0;
 	}
 	
 
 	void Update () 
 	{
+
 		GameOverCanvas.SetActive (false);
 		if (Time.timeScale == 1) 
 		{
@@ -46,14 +53,32 @@ public class GameManager : MonoBehaviour {
 		{
 			isPaused = 0;
 		}
-		if (healthManager.currentHealth <= 0) 
+		if (GameHealth <= 0) 
 		{
 			GameOverCanvas.SetActive (true);
 			GameCanvas.SetActive (false);
 			Time.timeScale = 0;
 			Destroy (GameObject.FindGameObjectWithTag("Enemy"));
+			StoreHighscore (scoreManager.currentScore);
 		}
+
+		GameHealth = healthManager.currentHealth;
 		GameScore = scoreManager.currentScore;
+		HealthScore = healthManager.currentHealth;
+	}
+
+	//void OnApplicationQuit ();
+	//{
+	//	PlayerPrefs.Save;
+	//}
+
+	void StoreHighscore(int newHighscore)
+	{
+		int oldHighscore = PlayerPrefs.GetInt ("highscore", 0);
+		if (newHighscore > oldHighscore){
+			Highscore = newHighscore;
+			PlayerPrefs.SetInt ("highscore", newHighscore);
+	}
 	}
 
 	public void PlayButton()
@@ -80,19 +105,37 @@ public class GameManager : MonoBehaviour {
 	public void MuteON()
 	{
 		AudioListener.volume = 0;
-		MuteOff.SetActive (false);
-		MuteOn.SetActive (true);
-		MuteOff1.SetActive (false);
+		MuteOff1.SetActive(false);
+		MuteOff2.SetActive(false);
+		MuteOff3.SetActive(false);
 		MuteOn1.SetActive (true);
+		MuteOn2.SetActive (true);
+		MuteOn3.SetActive (true);
+		isMute = false;
 	}
 
 	public void MuteOFF()
 	{
 		AudioListener.volume = 1;
-		MuteOff.SetActive (true);
-		MuteOn.SetActive (false);
 		MuteOff1.SetActive (true);
+		MuteOff2.SetActive (true);
+		MuteOff3.SetActive (true);
 		MuteOn1.SetActive (false);
+		MuteOn2.SetActive (false);
+		MuteOn3.SetActive (false);
+		isMute = true;
+	}
+
+	public void GameOverScript (){
+
+		if (healthManager.currentHealth <= 0) 
+		{
+			GameOverCanvas.SetActive (true);
+			GameCanvas.SetActive (false);
+			Time.timeScale = 0;
+			Destroy (GameObject.FindGameObjectWithTag("Enemy"));
+			StoreHighscore (scoreManager.currentScore);
+		}
 	}
 
 }

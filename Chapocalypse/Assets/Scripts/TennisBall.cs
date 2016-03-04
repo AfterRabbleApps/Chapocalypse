@@ -5,7 +5,6 @@ public class TennisBall : MonoBehaviour
 {
 	public float speed = 2f;
 	private SpriteRenderer spriteRenderer;
-	public int Points;
 	public Rigidbody2D[] rb;
 
 	void Start()

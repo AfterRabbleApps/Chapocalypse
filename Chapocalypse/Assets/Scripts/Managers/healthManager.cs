@@ -14,6 +14,7 @@ public class healthManager : MonoBehaviour {
 
 		text = GetComponent<Text> ();
 		currentHealth = 6;
+
 	}
 
 
