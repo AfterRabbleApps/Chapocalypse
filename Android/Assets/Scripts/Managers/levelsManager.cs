@@ -5,17 +5,20 @@ using System.Collections;
 public class levelsManager : MonoBehaviour {
 
 	public GameObject Levels;
-	bool toggleGui;
+
+	private Animator anim;
 
 	Text text;
 
 	void Start () {
 		text = GetComponent<Text> ();
+		anim = GetComponent<Animator> ();
 	
 	}
 
 	void Update () {
-		int gameLevels = GameManager.levels;
+
+		int gameLevels = spawnManger.gameLevels;
 		text.text = "Level: " + gameLevels;
 		}
 }

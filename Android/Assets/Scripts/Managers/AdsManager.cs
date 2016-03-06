@@ -16,7 +16,7 @@ public class AdsManager : MonoBehaviour {
 
 	IEnumerator ShowAdWhenReady()
 	{
-		while (!Advertisement.isReady ())
+		while (!Advertisement.IsReady ())
 			yield return null;
 
 		Advertisement.Show ();

@@ -16,7 +16,7 @@ public class highScoreManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		text.text = "Highscore is: " + PlayerPrefs.GetInt ("highscore", 0);
+		text.text = "Highscore is: \n" + PlayerPrefs.GetInt ("highscore", 0);
 	
 	}
 }
