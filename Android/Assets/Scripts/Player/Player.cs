@@ -4,8 +4,11 @@ using System.Collections;
 public class Player : MonoBehaviour
 {
 	public GameObject bulletPrefab;
-	Animator anim;
 	GameObject HealthManager;
+	public static float FireRate  = 40f;  // The number of bullets fired per second
+	public static float lastfired = 0f;      // The value of Time.time at the last firing moment
+
+	private Animator anim;
 
 	void Awake ()
 	{
@@ -21,10 +24,14 @@ public class Player : MonoBehaviour
 			mouseWorldPos.z = 0f;
 			transform.LookAt (mouseWorldPos);
 
-			if (Input.GetButtonDown ("Fire1")) {
-				GameObject bullet = GameObject.Instantiate (bulletPrefab);
-				bullet.transform.position = transform.position;
-				bullet.transform.forward = transform.forward;
+			if (Input.GetButton ("Fire1")) {
+				if (Time.time - lastfired > 1 / FireRate) {
+					lastfired = Time.time;
+					GameObject bullet = GameObject.Instantiate (bulletPrefab);
+					bullet.transform.position = transform.position;
+					bullet.transform.forward = transform.forward;
+			
+				}
 			}
 		}
 	}
@@ -37,7 +44,7 @@ public class Player : MonoBehaviour
 		}
 
 		if (aCollider.gameObject.tag == "Enemy") {
-			anim.SetTrigger ("PlayerTouch");
+			anim.SetTrigger ("playerHit");
 			healthManager.currentHealth = healthManager.currentHealth - dogAttack.dogValue;
 
 		}

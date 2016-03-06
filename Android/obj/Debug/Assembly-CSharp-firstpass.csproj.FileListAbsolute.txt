@@ -61,3 +61,5 @@ A:\Working Copy\Android\Temp\bin\Debug\UnityEngine.Networking.xml
 A:\Working Copy\Android\obj\Debug\Assembly-CSharp-firstpass.csprojResolveAssemblyReference.cache
 A:\Working Copy\Android\obj\Debug\Assembly-CSharp-firstpass.dll
 A:\Working Copy\Android\obj\Debug\Assembly-CSharp-firstpass.pdb
+A:\Working Copy\Android\Temp\bin\Debug\UnityEngine.Analytics.dll
+A:\Working Copy\Android\Temp\bin\Debug\UnityEngine.Analytics.xml

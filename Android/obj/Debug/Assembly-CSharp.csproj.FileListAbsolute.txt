@@ -85,3 +85,5 @@ A:\Working Copy\Android\Temp\bin\Debug\UnityEditor.xml
 A:\Working Copy\Android\Temp\bin\Debug\UnityEngine.UI.xml
 A:\Working Copy\Android\Temp\bin\Debug\UnityEngine.Networking.xml
 A:\Working Copy\Android\obj\Debug\Assembly-CSharp.pdb
+A:\Working Copy\Android\Temp\bin\Debug\UnityEngine.Analytics.dll
+A:\Working Copy\Android\Temp\bin\Debug\UnityEngine.Analytics.xml
