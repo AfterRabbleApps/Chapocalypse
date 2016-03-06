@@ -24,14 +24,14 @@ public class Player : MonoBehaviour
 			mouseWorldPos.z = 0f;
 			transform.LookAt (mouseWorldPos);
 
-			if (Input.GetButton ("Fire1")) {
-				if (Time.time - lastfired > 1 / FireRate) {
-					lastfired = Time.time;
-					GameObject bullet = GameObject.Instantiate (bulletPrefab);
+			if (Input.GetButtonDown ("Fire1")) {
+				//if (Time.time - lastfired > 1 / FireRate) {
+				//	lastfired = Time.time;
+				//	GameObject bullet = GameObject.Instantiate (bulletPrefab);
 					bullet.transform.position = transform.position;
 					bullet.transform.forward = transform.forward;
 			
-				}
+				//}
 			}
 		}
 	}
