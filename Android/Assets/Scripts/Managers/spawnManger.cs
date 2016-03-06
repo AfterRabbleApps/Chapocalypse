@@ -98,7 +98,7 @@ public class spawnManger : MonoBehaviour {
 				if (spawnTime == 0.2f) {
 					spawnTime = 1.0f;   // this resets spawn time to 1
 						CancelInvoke ("Spawn");
-					InvokeRepeating ("Spawn", 0, spawnTime);
+					InvokeRepeating ("Spawn", 0, 0.1f);
 				}
 				break;
 
@@ -116,10 +116,10 @@ public class spawnManger : MonoBehaviour {
 
 		int spawnPointIndex = Random.Range (0, spawnPoints.Length);
 		int enmeyIndex = Random.Range (0, enmey.Length);
-
+		  
 		if (GameManager.isPaused == 1)
 		{
-			Instantiate (enmey [enmeyIndex], spawnPoints [spawnPointIndex].position, spawnPoints [spawnPointIndex].rotation);
+			Instantiate (enmey [enmeyIndex], spawnPoints [spawnPointIndex].position, spawnPoints[1].rotation );
 		}
 	}
 }
