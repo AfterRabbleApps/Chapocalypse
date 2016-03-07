@@ -7,8 +7,6 @@ Project("{1BDF6059-9192-0DB1-1CBD-F8508204C4EB}") = "iOS", "Assembly-CSharp.cspr
 EndProject
 Project("{1BDF6059-9192-0DB1-1CBD-F8508204C4EB}") = "iOS", "Assembly-CSharp-Editor-firstpass.csproj", "{C0303906-2B6D-D1A0-60D9-42A3A5842A10}"
 EndProject
-Project("{1BDF6059-9192-0DB1-1CBD-F8508204C4EB}") = "iOS", "Assembly-CSharp-Editor.csproj", "{257F97B2-1C64-B7CA-2576-099DF4ACEAAE}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,10 +25,6 @@ Global
 		{C0303906-2B6D-D1A0-60D9-42A3A5842A10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0303906-2B6D-D1A0-60D9-42A3A5842A10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0303906-2B6D-D1A0-60D9-42A3A5842A10}.Release|Any CPU.Build.0 = Release|Any CPU
-		{257F97B2-1C64-B7CA-2576-099DF4ACEAAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{257F97B2-1C64-B7CA-2576-099DF4ACEAAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{257F97B2-1C64-B7CA-2576-099DF4ACEAAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{257F97B2-1C64-B7CA-2576-099DF4ACEAAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

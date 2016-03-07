@@ -1,16 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+[RequireComponent(typeof(AudioSource))]
+
 public class TennisBall : MonoBehaviour
 {
 	public float speed = 2f;
 	private SpriteRenderer spriteRenderer;
 	public Rigidbody2D[] rb;
+    private GameObject dogs;
+    public AudioSource dogHit;
+
+
 
 	void Start()
-	{
-		spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-	}
+    {
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+    }
+
 
 	void Update () 
 	{
@@ -26,9 +34,12 @@ public class TennisBall : MonoBehaviour
 		if(aCollider.gameObject.layer == LayerMask.NameToLayer("Enemy"))
 		{
 			scoreManager.currentScore += dogAttack.dogValue;
-			Destroy(aCollider.gameObject);
-			//Destroy(gameObject);
+            Destroy(aCollider.gameObject);
+            //Destroy(gameObject);
+
+            dogHit.GetComponent<AudioSource>().Play();
 
 		}
 	}
+
 }

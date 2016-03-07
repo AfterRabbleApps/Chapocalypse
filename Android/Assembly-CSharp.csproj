@@ -218,6 +218,7 @@
      <Compile Include="Assets\GooglePlayGames\Platforms\TokenClient.cs" />
      <Compile Include="Assets\GooglePlayGames\PluginVersion.cs" />
      <Compile Include="Assets\Scripts\Dogs\dogAttack.cs" />
+     <Compile Include="Assets\Scripts\Dogs\dogSound.cs" />
      <Compile Include="Assets\Scripts\Dogs\dogSpawner.cs" />
      <Compile Include="Assets\Scripts\Managers\AdsManager.cs" />
      <Compile Include="Assets\Scripts\Managers\GameManager.cs" />

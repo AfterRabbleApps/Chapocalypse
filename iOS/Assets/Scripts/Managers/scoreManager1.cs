@@ -31,7 +31,7 @@ public class scoreManager1 : MonoBehaviour
 		highScore = GameManager.Highscore;
 
 		text1.text= "Score: " + testScore;
-		text2.text = "Highscore is:" + ""+ PlayerPrefs.GetInt ("highscore", 0);
+		text2.text = "Highscore is: \n"+ PlayerPrefs.GetInt ("highscore", 0);
 
 	}
 

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
@@ -22,10 +23,10 @@ public class GameManager : MonoBehaviour {
 	public static int HealthScore;
 	public static int isPaused;
 	public static int GameScore;
+	private Animator anim;
 	public bool isMute;
 	public  bool isNight;
 	public int i = 1;
-	public static  int levels = 1;
 
 
 
@@ -35,18 +36,22 @@ public class GameManager : MonoBehaviour {
 		GameCanvas.SetActive (false);
 		PauseCanvas.SetActive (false);
 		GameOverCanvas.SetActive (false);
-		NightCanvas.SetActive (false);
+		//NightCanvas.SetActive (false);
 		MuteOn1.SetActive (false);
 		MuteOn2.SetActive (false);
 		MuteOn2.SetActive (false);
+		spawnManger.gameLevels = 1;
 		isPaused = 0;
 		Time.timeScale = 0;
+
+		anim = NightCanvas.GetComponent<Animator>();
+
 	}
 	
 
 	void Update () 
 	{
-
+		
 		GameOverCanvas.SetActive (false);
 		if (Time.timeScale == 1) 
 		{
@@ -68,13 +73,16 @@ public class GameManager : MonoBehaviour {
 		GameScore = scoreManager.currentScore;
 		HealthScore = healthManager.currentHealth;
 
-		if (levels % 2 == 0)
-		{
-			NightCanvas.SetActive (true);
-		}
-			if (levels % 2 == 1)
+		if (spawnManger.gameLevels % 2 == 0 )
 		{
 			NightCanvas.SetActive (false);
+			isNight = false;
+		}
+		if (spawnManger.gameLevels % 2 == 1 && spawnManger.gameLevels != 1)
+		{
+			NightCanvas.SetActive (true);
+			isNight = true;
+			//anim.SetTrigger ("nightCycle");
 		}
 	}
 		
@@ -91,10 +99,6 @@ public class GameManager : MonoBehaviour {
 
 	public void PauseButton()
 	{
-		if (isNight == true)
-		{
-			PauseCanvas.SetActive (true);
-		}
 		GameCanvas.SetActive (false);
 		PauseCanvas.SetActive (true);
 		Time.timeScale = 0;
@@ -102,7 +106,7 @@ public class GameManager : MonoBehaviour {
 	}
 	public void Restart ()
 	{
-		Application.LoadLevel (Application.loadedLevel);
+		SceneManager.LoadScene (Application.loadedLevel);
 	}
 
 	public void MuteON()
@@ -146,6 +150,7 @@ public class GameManager : MonoBehaviour {
 			Time.timeScale = 0;
 			Destroy (GameObject.FindGameObjectWithTag("Enemy"));
 			StoreHighscore (scoreManager.currentScore);
+			spawnManger.gameLevels= 0;
 		
 	}
 	void StoreHighscore(int newHighscore)

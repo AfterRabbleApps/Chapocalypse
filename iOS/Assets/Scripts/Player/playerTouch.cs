@@ -4,19 +4,20 @@ using System.Collections;
 public class playerTouch : MonoBehaviour
 {
 	public GameObject bulletPrefab;
+	private Animator anim;
+	public float speed = 10f;
 
 	// Use this for initialization
 	void Start ()
 	{
-
+		anim = GetComponent<Animator> ();
 	}
 
 	// Update is called once per frame
 	void Update ()
 	{
 
-		if (GameManager.isPaused == 1) 
-		{
+		if (GameManager.isPaused == 1) {
 			if (Input.touchCount >= 1) {
 				Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint (Input.GetTouch (1).position);
 				mouseWorldPos.z = 0f;
@@ -41,7 +42,7 @@ public class playerTouch : MonoBehaviour
 
 		if(aCollider.gameObject.tag == "Enemy")
 		{
-			
+			anim.SetTrigger ("playerHit");
 			healthManager.currentHealth = healthManager.currentHealth - dogAttack.dogValue;
 		}
 	}
