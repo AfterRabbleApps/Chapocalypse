@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour {
 	public static int HealthScore;
 	public static int isPaused;
 	public static int GameScore;
-	private Animator anim;
 	public bool isMute;
 	public  bool isNight;
 	public int i = 1;
@@ -44,7 +43,7 @@ public class GameManager : MonoBehaviour {
 		isPaused = 0;
 		Time.timeScale = 0;
 
-		anim = NightCanvas.GetComponent<Animator>();
+		
 
 	}
 	
