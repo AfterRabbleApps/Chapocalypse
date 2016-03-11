@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
+using GooglePlayGames;
+using GooglePlayGames.BasicApi.Multiplayer;
 
 public class GameManager : MonoBehaviour {
 
@@ -28,31 +30,44 @@ public class GameManager : MonoBehaviour {
 	public  bool isNight;
 	public int i = 1;
 
+    private int newgpsHighScore;
+    public int gpsHighScore;
 
+
+
+    void Awake ()
+    {
+        MultiplayerController.Instance.TrySilentSignIn();
+    }
 
 	void Start () 
 	{
+        
 		MainMenuCanvas.SetActive(true);
 		GameCanvas.SetActive (false);
 		PauseCanvas.SetActive (false);
 		GameOverCanvas.SetActive (false);
-		//NightCanvas.SetActive (false);
+		NightCanvas.SetActive (false);
+        GameOverCanvas.SetActive(false);
 		MuteOn1.SetActive (false);
 		MuteOn2.SetActive (false);
 		MuteOn2.SetActive (false);
 		spawnManger.gameLevels = 1;
 		isPaused = 0;
 		Time.timeScale = 0;
-
+    
 		anim = NightCanvas.GetComponent<Animator>();
+        Debug.Log("Can I go to sleep?" + !isNight); 
 
 	}
 	
 
 	void Update () 
 	{
-		
-		GameOverCanvas.SetActive (false);
+        if (GameHealth >= 2)
+        {
+            GameOverCanvas.SetActive (false);
+        }
 		if (Time.timeScale == 1) 
 		{
 			isPaused = 1;
@@ -66,6 +81,7 @@ public class GameManager : MonoBehaviour {
 		{
 			GameOverScript ();
 		}
+       
 
 
 
@@ -73,16 +89,18 @@ public class GameManager : MonoBehaviour {
 		GameScore = scoreManager.currentScore;
 		HealthScore = healthManager.currentHealth;
 
-		if (spawnManger.gameLevels % 2 == 0 )
+        if (spawnManger.gameLevels % 2 == 0 && isNight )
 		{
 			NightCanvas.SetActive (false);
 			isNight = false;
+            Debug.Log("Night Time :" + isNight); 
 		}
-		if (spawnManger.gameLevels % 2 == 1 && spawnManger.gameLevels != 1)
+        if (spawnManger.gameLevels % 2 == 1 && spawnManger.gameLevels != 1 && !isNight)
 		{
 			NightCanvas.SetActive (true);
 			isNight = true;
-			//anim.SetTrigger ("nightCycle");
+            Debug.Log("Night Time :" + !isNight); 
+
 		}
 	}
 		
@@ -138,10 +156,27 @@ public class GameManager : MonoBehaviour {
 		Application.Quit ();
 	}
 
-	public void leaderboard()
-	{
-		Social.ShowLeaderboardUI ();
-	}
+
+    public void SignIn ()
+    {
+        MultiplayerController.Instance.SignInAndStartMPGame();
+    }
+    public void leaderboard()
+    {
+        MultiplayerController.Instance.SignInAndStartMPGame();
+        PlayGamesPlatform.Instance.ShowLeaderboardUI();
+
+    }
+
+    public void SignOut() {
+        PlayGamesPlatform.Instance.SignOut ();
+    }
+
+
+    public bool IsAuthenticated() {
+        return PlayGamesPlatform.Instance.localUser.authenticated;
+    }
+
 
 	public void GameOverScript (){
 		
@@ -153,7 +188,7 @@ public class GameManager : MonoBehaviour {
 			spawnManger.gameLevels= 0;
 		
 	}
-	void StoreHighscore(int newHighscore)
+    void StoreHighscore(int newHighscore)
 	{
 		
 		int oldHighscore = PlayerPrefs.GetInt ("highscore", 0);
@@ -161,6 +196,19 @@ public class GameManager : MonoBehaviour {
 			Highscore = newHighscore;
 			PlayerPrefs.SetInt ("highscore", newHighscore);
 		}
+
+        if (gpsHighScore < Highscore)
+        {
+            gpsHighScore = Highscore;
+            Social.ReportScore(gpsHighScore, "CgkI1ePEjJ4eEAIQBg", (bool success) =>
+                {
+                    
+                });
+        }
+
+       
+
+
 	}
 }
 

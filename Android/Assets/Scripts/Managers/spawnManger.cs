@@ -5,16 +5,19 @@ public class spawnManger : MonoBehaviour {
 
 	public GameObject[] enmey;
 	public float spawnTime = 2.0f;
-	public Transform[] spawnPoints;
+    public GameObject[] spawnPoints;
 	public bool resetStatic = false;
 	public static int gameLevels;
 	public static bool upLevel = true;
 
  	
 	void Start () {
-		InvokeRepeating ("Spawn", 1.0f, 1.0f); 
-		gameLevels = 1;
-	}
+        InvokeRepeating("Spawn", 1.0f, 1.0f); 
+        gameLevels = 1;
+        spawnPoints = GameObject.FindGameObjectsWithTag("Spawner");
+	
+
+    }
 	void Update()
 	{
 		if (((scoreManager.currentScore % 10) == 0) && (scoreManager.currentScore > 1) && spawnTime > 0.1) {
@@ -108,12 +111,15 @@ public class spawnManger : MonoBehaviour {
 			return;
 		}
 
-		int spawnPointIndex = Random.Range (0, spawnPoints.Length);
+		int spawnPointPre = Random.Range (0, spawnPoints.Length);
+        int spawnPointIndex = spawnPointPre++;
 		int enmeyIndex = Random.Range (0, enmey.Length);
+        transform.rotation = Quaternion.identity;
+        //Debug.Log(spawnPointIndex);
 		  
 		if (GameManager.isPaused == 1)
 		{
-			Instantiate (enmey [enmeyIndex], spawnPoints [spawnPointIndex].position, spawnPoints[1].rotation );
+            Instantiate (enmey [enmeyIndex], spawnPoints [spawnPointIndex].transform.position, transform.rotation );
 		}
 	}
 }

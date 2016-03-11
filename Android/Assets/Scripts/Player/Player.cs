@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
  
+
+[RequireComponent(typeof(AudioSource))]
 public class Player : MonoBehaviour
 {
     public GameObject bulletPrefab;
@@ -8,6 +10,7 @@ public class Player : MonoBehaviour
     public static float FireRate  = 40f;  // The number of bullets fired per second
     public static float lastfired = 0f;      // The value of Time.time at the last firing moment
     public static bool fullAuto;
+    public AudioSource playerHit;
  
     private Animator anim;
 	public float speed = 10f;
@@ -41,6 +44,7 @@ public class Player : MonoBehaviour
         if (aCollider.gameObject.tag == "Enemy") {
             anim.SetTrigger ("playerHit");
             healthManager.currentHealth = healthManager.currentHealth - dogAttack.dogValue;
+            playerHit.GetComponent<AudioSource>().Play();
  
         }
  

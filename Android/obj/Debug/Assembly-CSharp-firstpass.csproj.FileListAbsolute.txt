@@ -63,3 +63,49 @@ A:\Working Copy\Android\obj\Debug\Assembly-CSharp-firstpass.dll
 A:\Working Copy\Android\obj\Debug\Assembly-CSharp-firstpass.pdb
 A:\Working Copy\Android\Temp\bin\Debug\UnityEngine.Analytics.dll
 A:\Working Copy\Android\Temp\bin\Debug\UnityEngine.Analytics.xml
+A:\ChApocalypse Master\Working Copy\Android\Temp\bin\Debug\Assembly-CSharp-firstpass.dll
+A:\ChApocalypse Master\Working Copy\Android\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+A:\ChApocalypse Master\Working Copy\Android\Temp\bin\Debug\UnityEditor.dll
+A:\ChApocalypse Master\Working Copy\Android\Temp\bin\Debug\UnityEngine.Analytics.dll
+A:\ChApocalypse Master\Working Copy\Android\Temp\bin\Debug\UnityEngine.dll
+A:\ChApocalypse Master\Working Copy\Android\Temp\bin\Debug\UnityEngine.Networking.dll
+A:\ChApocalypse Master\Working Copy\Android\Temp\bin\Debug\UnityEngine.UI.dll
+A:\ChApocalypse Master\Working Copy\Android\Temp\bin\Debug\Mono.Cecil.dll
+A:\ChApocalypse Master\Working Copy\Android\Temp\bin\Debug\Unity.SerializationLogic.dll
+A:\ChApocalypse Master\Working Copy\Android\Temp\bin\Debug\Unity.DataContract.dll
+A:\ChApocalypse Master\Working Copy\Android\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+A:\ChApocalypse Master\Working Copy\Android\Temp\bin\Debug\Unity.UNetWeaver.dll
+A:\ChApocalypse Master\Working Copy\Android\Temp\bin\Debug\Unity.CecilTools.dll
+A:\ChApocalypse Master\Working Copy\Android\Temp\bin\Debug\Mono.Cecil.Pdb.dll
+A:\ChApocalypse Master\Working Copy\Android\Temp\bin\Debug\Mono.Cecil.Mdb.dll
+A:\ChApocalypse Master\Working Copy\Android\Temp\bin\Debug\UnityEditor.xml
+A:\ChApocalypse Master\Working Copy\Android\Temp\bin\Debug\UnityEngine.UI.xml
+A:\ChApocalypse Master\Working Copy\Android\Temp\bin\Debug\UnityEngine.Networking.xml
+A:\ChApocalypse Master\Working Copy\Android\Temp\bin\Debug\UnityEngine.Analytics.xml
+A:\ChApocalypse Master\Working Copy\Android\obj\Debug\Assembly-CSharp-firstpass.csprojResolveAssemblyReference.cache
+A:\ChApocalypse Master\Working Copy\Android\obj\Debug\Assembly-CSharp-firstpass.dll
+A:\ChApocalypse Master\Working Copy\Android\obj\Debug\Assembly-CSharp-firstpass.pdb
+A:\ChApocalypse Master\Working Copy\Android\Temp\bin\Debug\UnityEngine.xml
+A:\ChApocalypse Master\TestBuild\Android\Temp\bin\Debug\Assembly-CSharp-firstpass.dll
+A:\ChApocalypse Master\TestBuild\Android\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+A:\ChApocalypse Master\TestBuild\Android\Temp\bin\Debug\UnityEditor.dll
+A:\ChApocalypse Master\TestBuild\Android\Temp\bin\Debug\UnityEngine.Analytics.dll
+A:\ChApocalypse Master\TestBuild\Android\Temp\bin\Debug\UnityEngine.dll
+A:\ChApocalypse Master\TestBuild\Android\Temp\bin\Debug\UnityEngine.Networking.dll
+A:\ChApocalypse Master\TestBuild\Android\Temp\bin\Debug\UnityEngine.UI.dll
+A:\ChApocalypse Master\TestBuild\Android\Temp\bin\Debug\Mono.Cecil.dll
+A:\ChApocalypse Master\TestBuild\Android\Temp\bin\Debug\Unity.SerializationLogic.dll
+A:\ChApocalypse Master\TestBuild\Android\Temp\bin\Debug\Unity.DataContract.dll
+A:\ChApocalypse Master\TestBuild\Android\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+A:\ChApocalypse Master\TestBuild\Android\Temp\bin\Debug\Unity.UNetWeaver.dll
+A:\ChApocalypse Master\TestBuild\Android\Temp\bin\Debug\Unity.CecilTools.dll
+A:\ChApocalypse Master\TestBuild\Android\Temp\bin\Debug\Mono.Cecil.Pdb.dll
+A:\ChApocalypse Master\TestBuild\Android\Temp\bin\Debug\Mono.Cecil.Mdb.dll
+A:\ChApocalypse Master\TestBuild\Android\Temp\bin\Debug\UnityEngine.xml
+A:\ChApocalypse Master\TestBuild\Android\Temp\bin\Debug\UnityEditor.xml
+A:\ChApocalypse Master\TestBuild\Android\Temp\bin\Debug\UnityEngine.UI.xml
+A:\ChApocalypse Master\TestBuild\Android\Temp\bin\Debug\UnityEngine.Networking.xml
+A:\ChApocalypse Master\TestBuild\Android\Temp\bin\Debug\UnityEngine.Analytics.xml
+A:\ChApocalypse Master\TestBuild\Android\obj\Debug\Assembly-CSharp-firstpass.csprojResolveAssemblyReference.cache
+A:\ChApocalypse Master\TestBuild\Android\obj\Debug\Assembly-CSharp-firstpass.dll
+A:\ChApocalypse Master\TestBuild\Android\obj\Debug\Assembly-CSharp-firstpass.pdb

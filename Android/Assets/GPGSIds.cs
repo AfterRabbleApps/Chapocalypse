@@ -29,7 +29,7 @@ public static class GPGSIds
         public const string achievement_300_points = "CgkI1ePEjJ4eEAIQBQ"; // <GPGSID>
         public const string achievement_100_points = "CgkI1ePEjJ4eEAIQAw"; // <GPGSID>
         public const string achievement_150_points = "CgkI1ePEjJ4eEAIQBA"; // <GPGSID>
-        public const string leaderboard_highscores_ = "CgkI1ePEjJ4eEAIQBg"; // <GPGSID>
+        public const string leaderboard_highscores = "CgkI1ePEjJ4eEAIQBg"; // <GPGSID>
 
 }
 

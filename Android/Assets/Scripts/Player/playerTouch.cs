@@ -1,11 +1,14 @@
 using UnityEngine;
 using System.Collections;
 
+
+[RequireComponent(typeof(AudioSource))]
 public class playerTouch : MonoBehaviour
 {
 	public GameObject bulletPrefab;
 	private Animator anim;
 	public float speed = 10f;
+    public AudioSource playerHit;
 
 	// Use this for initialization
 	void Start ()
@@ -44,6 +47,9 @@ public class playerTouch : MonoBehaviour
 		{
 			anim.SetTrigger ("playerHit");
 			healthManager.currentHealth = healthManager.currentHealth - dogAttack.dogValue;
+            playerHit.GetComponent<AudioSource>().Play();
+
+
 		}
 	}
 }
